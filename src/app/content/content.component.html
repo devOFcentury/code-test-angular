@@ -1,5 +1,11 @@
 <div class="container">
     <div class="wrapper">
-      <h1>the content</h1>
+      @if (player()) {
+
+        <p>Name: {{ player()?.name }}</p>
+        <p>Club: {{ player()?.club }}</p>
+      } @else {
+        <p>No player Please. Select a player</p>
+      }
     </div>
   </div>
